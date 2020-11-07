@@ -6,15 +6,12 @@
         "name": "CoreUI",
         "url": "https://coreui.io",
         "github": "https://github.com/coreui",
-        "twitter": "https://twitter.com/core_ui",
-        "start": "node server.js"
+        "twitter": "https://twitter.com/core_ui"
     },
-    "contributors": [
-        {
-            "name": "CoreUI Team",
-            "url": "https://github.com/orgs/coreui/people"
-        }
-    ],
+    "contributors": [{
+        "name": "CoreUI Team",
+        "url": "https://github.com/orgs/coreui/people"
+    }],
     "repository": {
         "type": "git",
         "url": "git@github.com:coreui/coreui-free-vue-admin-template.git"
@@ -30,7 +27,9 @@
         "test:e2e": "vue-cli-service test:e2e",
         "clearCache": "jest --clearCache",
         "release": "npm-run-all clearCache lint build test:unit test:e2e",
-        "auto-changelog": "auto-changelog  --hide-credit --commit-limit false --package --backfill-limit 0 --starting-version 3.0.0-beta.0"
+        "auto-changelog": "auto-changelog  --hide-credit --commit-limit false --package --backfill-limit 0 --starting-version 3.0.0-beta.0",
+        "start": "node server.js"
+
     },
     "dependencies": {
         "@coreui/coreui": "^3.2.2",

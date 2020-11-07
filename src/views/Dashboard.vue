@@ -310,7 +310,7 @@
 // import MainChartExample from './charts/MainChartExample'
 // import WidgetsDropdown from './widgets/WidgetsDropdown'
 // import WidgetsBrand from './widgets/WidgetsBrand'
-
+import Counrty from './Contery'
 export default {
     name: 'Dashboard',
     components: {
@@ -321,23 +321,24 @@ export default {
     data() {
         return {
             selected: 'Month',
+            list: Counrty,
             tableItems: [{
                     avatar: {
-                        url: 'img/avatars/1.jpg',
+                        url: 'img/avatars/6.jpg',
                         status: 'success'
                     },
                     user: {
-                        name: 'Yiorgos Avraamu',
-                        new: true,
-                        registered: 'Jan 1, 2015'
+                        name: 'Ali MOhamadi',
+                        new: false,
+                        registered: 'Jan 1, 2020'
                     },
                     country: {
-                        name: 'USA',
-                        flag: 'cif-us'
+                        name: 'iran',
+                        flag: 'cif-in'
                     },
                     usage: {
-                        value: 50,
-                        period: 'Jun 11, 2015 - Jul 10, 2015'
+                        value: 100,
+                        period: 'Jun 11, 2020 - Jul 10, 2020'
                     },
                     payment: {
                         name: 'Mastercard',

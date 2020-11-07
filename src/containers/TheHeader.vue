@@ -6,24 +6,25 @@
         <img class="img-fluid" src="../../public/samanLogo.png" alt="">
         <!--<CIcon name="logo" height="48" alt="Logo"/>-->
     </CHeaderBrand>
-    <CHeaderNav class="d-md-down-none mr-auto">
+    <CHeaderNav class="d-md-down-none">
         <CHeaderNavItem class="px-3">
             <CHeaderNavLink to="/dashboard">
-                Dashboard
+                داشبرد
             </CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem class="px-3">
             <CHeaderNavLink to="/users" exact>
-                Users
+                کاربر
             </CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem class="px-3">
             <CHeaderNavLink>
-                Settings
+                تنظیمات
             </CHeaderNavLink>
         </CHeaderNavItem>
     </CHeaderNav>
-    <CHeaderNav class="mr-4">
+
+    <CHeaderNav class="mr-4 mr-auto">
         <CHeaderNavItem class="d-md-down-none mx-2">
             <CHeaderNavLink>
                 <CIcon name="cil-bell" />
@@ -41,9 +42,10 @@
         </CHeaderNavItem>
         <TheHeaderDropdownAccnt />
     </CHeaderNav>
-    <CSubheader class="px-3">
+
+    <!--<CSubheader class="px-3">
         <CBreadcrumbRouter class="border-0 mb-0" />
-    </CSubheader>
+    </CSubheader>-->
 </CHeader>
 </template>
 
