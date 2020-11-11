@@ -3,7 +3,7 @@
     <CCol col="12">
         <CCard>
             <CCardHeader>
-                Users
+                کاربران
             </CCardHeader>
             <CCardBody>
                 <CDataTable hover striped :items="items" :fields="fields" :items-per-page="5" clickable-rows :active-page="activePage" @row-clicked="rowClicked" :pagination="{ doubleArrows: false, align: 'center'}" @page-change="pageChange">

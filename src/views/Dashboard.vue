@@ -303,6 +303,7 @@
             </CCard>
         </CCol>
     </CRow>
+
 </div>
 </template>
 
@@ -310,9 +311,11 @@
 // import MainChartExample from './charts/MainChartExample'
 // import WidgetsDropdown from './widgets/WidgetsDropdown'
 // import WidgetsBrand from './widgets/WidgetsBrand'
-import Counrty from './Contery'
+import country from './country'
 export default {
     name: 'Dashboard',
+    names: 'Users',
+
     components: {
         // MainChartExample,
         // WidgetsDropdown,
@@ -321,7 +324,30 @@ export default {
     data() {
         return {
             selected: 'Month',
-            list: Counrty,
+            items: country,
+            fields: [{
+                    key: 'name',
+                    label: 'Name',
+                    _classes: 'font-weight-bold'
+                },
+                {
+                    key: 'registered'
+                },
+                {
+                    key: 'balance'
+                },
+                {
+                    key: 'age'
+                },
+                {
+                    key: 'status'
+                },
+                {
+                    key: 'email'
+                }
+            ],
+            activePage: 1,
+
             tableItems: [{
                     avatar: {
                         url: 'img/avatars/6.jpg',
@@ -493,6 +519,16 @@ export default {
             ]
         }
     },
+    watch: {
+        $route: {
+            immediate: true,
+            handler(route) {
+                if (route.query && route.query.page) {
+                    this.activePage = Number(route.query.page)
+                }
+            }
+        }
+    },
     methods: {
         color(value) {
             let $color
@@ -506,6 +542,32 @@ export default {
                 $color = 'danger'
             }
             return $color
+        },
+        getBadge(status) {
+            switch (status) {
+                case 'Active':
+                    return 'success'
+                case 'Inactive':
+                    return 'secondary'
+                case 'Pending':
+                    return 'warning'
+                case 'Banned':
+                    return 'danger'
+                default:
+                    'primary'
+            }
+        },
+        rowClicked(item, index) {
+            this.$router.push({
+                path: `users/${index + 1}`
+            })
+        },
+        pageChange(val) {
+            this.$router.push({
+                query: {
+                    page: val
+                }
+            })
         }
     }
 }
